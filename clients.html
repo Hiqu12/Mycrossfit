@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             color: #333;
         }
 
-         /* Navbar Styles */
+        /* Navbar Styles */
         .navbar {
             background: rgba(255, 251, 251, 0.9);
             backdrop-filter: blur(20px);
@@ -206,8 +207,8 @@
 
         /* Hero Section for Clients Page */
         .clients-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -533,6 +534,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -558,30 +560,41 @@
                 padding: 2rem 0;
                 text-align: left;
             }
-/* Mobile-first enhanced nav-link styling */
-.nav-link {
-    /* position: relative; */
-    margin-left: 20px;
-    display: block;                  /* Ensure full clickable area */
-    padding: 12px 16px;              /* More touch-friendly */
-    font-size: 16px;                 /* Readable on small screens */
-    color: #ffffff;                  /* Light color for visibility */
-    /* background-color: #1e1e2f;           Subtle background */
-    margin-bottom: 8px;              /* Space between links */
-    border-radius: 8px;              /* Smooth corners */
-    text-decoration: none;           /* Remove underlines */
-    transition: background 0.3s ease, transform 0.2s ease;
-}
 
-.nav-link:hover {
-    /* background-color: #33334d;       Highlight on hover */
-    transform: scale(1.03);          /* Subtle zoom effect */
-}
+            /* Mobile-first enhanced nav-link styling */
+            .nav-link {
+                /* position: relative; */
+                margin-left: 20px;
+                display: block;
+                /* Ensure full clickable area */
+                padding: 12px 16px;
+                /* More touch-friendly */
+                font-size: 16px;
+                /* Readable on small screens */
+                color: #ffffff;
+                /* Light color for visibility */
+                /* background-color: #1e1e2f;           Subtle background */
+                margin-bottom: 8px;
+                /* Space between links */
+                border-radius: 8px;
+                /* Smooth corners */
+                text-decoration: none;
+                /* Remove underlines */
+                transition: background 0.3s ease, transform 0.2s ease;
+            }
 
-.nav-link:active {
-    background-color: #444466;       /* Active tap feedback */
-    transform: scale(0.98);          /* Slight shrink */
-}
+            .nav-link:hover {
+                /* background-color: #33334d;       Highlight on hover */
+                transform: scale(1.03);
+                /* Subtle zoom effect */
+            }
+
+            .nav-link:active {
+                background-color: #444466;
+                /* Active tap feedback */
+                transform: scale(0.98);
+                /* Slight shrink */
+            }
 
             .nav-menu.active {
                 left: 0;
@@ -590,7 +603,8 @@
             .mobile-menu {
                 display: flex;
             }
-            .mobile-menu span{
+
+            .mobile-menu span {
                 background-color: black;
             }
 
@@ -622,6 +636,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -630,13 +645,13 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="clients.html" class="nav-link">Success Stories</a></li>
-                <li><a href="#timings" class="nav-link">Timings</a></li>
+                <li><a href="index.html#timings" class="nav-link">Timings</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="saloon.html" class="nav-link">Blush Me</a></li>
                 <li><a href="trainer.html" class="nav-link">Our Trainers</a></li>
                 <li><a href="#membership" class="nav-link">Membership</a></li>
-                <li><a href="#facilities" class="nav-link">Facilities</a></li>
+                <li><a href="hijama.html" class="nav-link">Hijama</a></li>
                 <li><a href="#nutrition" class="nav-link">Nutrition Plans</a></li>
                 <!-- <li><a href="#blog" class="nav-link">Blog</a></li> -->
             </ul>
@@ -652,7 +667,8 @@
     <section class="clients-hero">
         <div class="container">
             <h1>Success Stories</h1>
-            <p>Discover the incredible transformations of our MYCROSSFIT family. Real people, real results, real inspiration from Daska's premier fitness center.</p>
+            <p>Discover the incredible transformations of our MYCROSSFIT family. Real people, real results, real
+                inspiration from Daska's premier fitness center.</p>
         </div>
     </section>
 
@@ -684,8 +700,9 @@
     <section id="clients" class="success-stories">
         <div class="container">
             <h2 class="section-title">Transformation Stories</h2>
-            <p class="section-subtitle">Meet our incredible members who achieved their fitness goals with dedication, hard work, and our expert guidance at MYCROSSFIT Daska.</p>
-            
+            <p class="section-subtitle">Meet our incredible members who achieved their fitness goals with dedication,
+                hard work, and our expert guidance at MYCROSSFIT Daska.</p>
+
             <!-- Filter Buttons -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Stories</button>
@@ -698,7 +715,8 @@
             <div class="clients-grid">
                 <!-- Weight Loss Success Stories -->
                 <div class="client-card" data-category="weight-loss">
-                    <div class="client-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="client-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-loss">-25kg Lost</div>
                     </div>
                     <div class="client-info">
@@ -718,13 +736,16 @@
                                 <div class="stat-label">Lost</div>
                             </div>
                         </div>
-                        <div class="client-quote">"MYCROSSFIT changed my life completely. The women's section made me feel comfortable and the trainers were incredibly supportive. I never thought I could lose 25kg!"</div>
+                        <div class="client-quote">"MYCROSSFIT changed my life completely. The women's section made me
+                            feel comfortable and the trainers were incredibly supportive. I never thought I could lose
+                            25kg!"</div>
                         <div class="duration">Transformation Time: 8 months</div>
                     </div>
                 </div>
 
                 <div class="client-card" data-category="weight-loss">
-                    <div class="client-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="client-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-loss">-18kg Lost</div>
                     </div>
                     <div class="client-info">
@@ -744,14 +765,16 @@
                                 <div class="stat-label">Lost</div>
                             </div>
                         </div>
-                        <div class="client-quote">"The separate timings for women made all the difference. I felt confident and motivated throughout my journey. Best decision ever!"</div>
+                        <div class="client-quote">"The separate timings for women made all the difference. I felt
+                            confident and motivated throughout my journey. Best decision ever!"</div>
                         <div class="duration">Transformation Time: 6 months</div>
                     </div>
                 </div>
 
                 <!-- Weight Gain Success Stories -->
                 <div class="client-card" data-category="weight-gain">
-                    <div class="client-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="client-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-gain">+15kg Gained</div>
                     </div>
                     <div class="client-info">
@@ -771,13 +794,16 @@
                                 <div class="stat-label">Gained</div>
                             </div>
                         </div>
-                        <div class="client-quote">"I was always underweight and lacked confidence. MYCROSSFIT's evening sessions fit perfectly with my schedule. The trainers helped me gain healthy weight and build strength."</div>
+                        <div class="client-quote">"I was always underweight and lacked confidence. MYCROSSFIT's evening
+                            sessions fit perfectly with my schedule. The trainers helped me gain healthy weight and
+                            build strength."</div>
                         <div class="duration">Transformation Time: 10 months</div>
                     </div>
                 </div>
 
                 <div class="client-card" data-category="weight-gain">
-                    <div class="client-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="client-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-gain">+12kg Gained</div>
                     </div>
                     <div class="client-info">
@@ -797,14 +823,16 @@
                                 <div class="stat-label">Gained</div>
                             </div>
                         </div>
-                        <div class="client-quote">"Finally found a gym in Daska that understands my goals. The equipment is top-notch and the evening timing works perfect for my job schedule."</div>
+                        <div class="client-quote">"Finally found a gym in Daska that understands my goals. The equipment
+                            is top-notch and the evening timing works perfect for my job schedule."</div>
                         <div class="duration">Transformation Time: 7 months</div>
                     </div>
                 </div>
 
                 <!-- Muscle Building Success Stories -->
                 <div class="client-card" data-category="muscle-gain">
-                    <div class="client-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="client-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge muscle-gain">Muscle Built</div>
                     </div>
                     <div class="client-info">
@@ -824,13 +852,15 @@
                                 <div class="stat-label">Muscle</div>
                             </div>
                         </div>
-                        <div class="client-quote">"Transformed my body composition completely. Lost fat and gained lean muscle. The trainers at MYCROSSFIT know exactly what they're doing!"</div>
+                        <div class="client-quote">"Transformed my body composition completely. Lost fat and gained lean
+                            muscle. The trainers at MYCROSSFIT know exactly what they're doing!"</div>
                         <div class="duration">Transformation Time: 12 months</div>
                     </div>
                 </div>
 
                 <div class="client-card" data-category="muscle-gain">
-                    <div class="client-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="client-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge muscle-gain">Strength Gained</div>
                     </div>
                     <div class="client-info">
@@ -850,7 +880,8 @@
                                 <div class="stat-label">Muscle</div>
                             </div>
                         </div>
-                        <div class="client-quote">"I wanted to get stronger, not just smaller. MYCROSSFIT helped me build lean muscle while staying feminine. The women's section is amazing!"</div>
+                        <div class="client-quote">"I wanted to get stronger, not just smaller. MYCROSSFIT helped me
+                            build lean muscle while staying feminine. The women's section is amazing!"</div>
                         <div class="duration">Transformation Time: 9 months</div>
                     </div>
                 </div>
@@ -871,7 +902,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-text">"MYCROSSFIT is the best gym in Daska! The separate timings for men and women make it perfect for our culture. Professional trainers and excellent equipment."</div>
+                    <div class="testimonial-text">"MYCROSSFIT is the best ladies gym in Daska! It offers a safe, private, and supportive environment just for women. The female trainers are professional, the equipment is top-notch, and the programs focus on both fitness and overall beauty and wellness. Highly recommended for any woman serious about her health!"</div>
                     <div class="testimonial-author">- Nadia Sheikh</div>
                 </div>
                 <div class="testimonial-card">
@@ -882,8 +913,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-text">"Finally, a world-class gym in our city! The evening sessions are perfect for working professionals. Highly recommend to everyone in Daska."</div>
-                    <div class="testimonial-author">- Tariq Ahmed</div>
+                    <div class="testimonial-text">"Finally, a world-class ladies gym in Daska! The evening sessions are ideal for working women. The environment feels safe, the trainers are professional, and the focus on women’s health and wellness is truly impressive. Highly recommended!"</div>
+                    <div class="testimonial-author">- Iqra Ijaz</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="rating">
@@ -893,14 +924,14 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-text">"The supportive environment and expert guidance helped me achieve results I never thought possible. MYCROSSFIT family is amazing!"</div>
+                    <div class="testimonial-text">"MYCROSSFIT ek safe aur comfortable environment provide karta hai jahan sirf women ke liye health aur fitness par focus hota hai. Female trainers ki guidance aur support se mujhe apni health mein bohot behtari mehsoos hui. Yahan ka mahaul bohot positive hai!"</div>
                     <div class="testimonial-author">- Zainab Ali</div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -917,19 +948,21 @@
                         <li><a href="clients.html" style="color: #ccc; text-decoration: none;">Success Stories</a></li>
                         <li><a href="#timings" style="color: #ccc; text-decoration: none;">Timings</a></li>
                         <li><a href="#about" style="color: #ccc; text-decoration: none;">About</a></li>
-                        <li><a href="program.html" style="color: #ccc; text-decoration: none;">Programs</a></li>
+                        <li><a href="saloon.html" style="color: #ccc; text-decoration: none;">Blush Me</a></li>
                         <li><a href="trainer.html" style="color: #ccc; text-decoration: none;">Our Trainers</a></li>
                         <li><a href="member.html" style="color: #ccc; text-decoration: none;">Membership</a></li>
-                        <li><a href="facilities.html" style="color: #ccc; text-decoration: none;">Facilities</a></li>
-                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a></li>
+                        <li><a href="hijama.html" style="color: #ccc; text-decoration: none;">Hijama</a></li>
+                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a>
+                        </li>
                         <li><a href="#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section"">
                     <h3>Contact Info</h3>
-                    <p  style="padding: 6px;"><i class="fas fa-phone"></i> +92 3216436348</p>
-                    <p  style="padding: 6px;"><i class="fas fa-envelope"></i> info@mycrossfit.com</p>
-                    <p  style="padding: 6px;"><i class="fas fa-map-marker-alt"></i> College Road,Daska, Punjab, Pakistan</p>
+                    <p  style=" padding: 6px;"><i class="fas fa-phone"></i> +92 3216436348</p>
+                    <p style="padding: 6px;"><i class="fas fa-envelope"></i> info@mycrossfit.com</p>
+                    <p style="padding: 6px;"><i class="fas fa-map-marker-alt"></i> College Road,Daska, Punjab, Pakistan
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
@@ -971,5 +1004,5 @@
             });
         });
 
-        
-        </script>
+
+    </script>

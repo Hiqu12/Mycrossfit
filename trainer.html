@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             color: #333;
         }
 
-         /* Navbar Styles */
+        /* Navbar Styles */
         .navbar {
             background: rgba(255, 251, 251, 0.9);
             backdrop-filter: blur(20px);
@@ -203,673 +204,677 @@
             opacity: 0.9;
         }
 
-/* MYCROSSFIT Trainers Page CSS */
+        /* MYCROSSFIT Trainers Page CSS */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
 
-/* CSS Variables */
-:root {
-    --primary-color: #ff6b35;
-    --primary-dark: #e55a2b;
-    --secondary-color: #2c3e50;
-    --accent-color: #f39c12;
-    --text-dark: #2c3e50;
-    --text-light: #7f8c8d;
-    --text-white: #ffffff;
-    --background-light: #f8f9fa;
-    --background-dark: #1a1a1a;
-    --border-color: #e9ecef;
-    --success-color: #27ae60;
-    --warning-color: #f39c12;
-    --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f39c12 100%);
-    --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
-    --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
-    --border-radius: 12px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        /* CSS Variables */
+        :root {
+            --primary-color: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary-color: #2c3e50;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --text-white: #ffffff;
+            --background-light: #f8f9fa;
+            --background-dark: #1a1a1a;
+            --border-color: #e9ecef;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f39c12 100%);
+            --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* Hero Section */
-.trainers-hero {
-     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+        /* Hero Section */
+        .trainers-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-    color: var(--text-white);
-    padding: 120px 0 80px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.trainers-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
-}
-
-.trainers-hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-.trainers-hero h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.trainers-hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    opacity: 0.9;
-    line-height: 1.7;
-}
-
-/* Stats Section */
-.stats-section {
-    background: var(--background-light);
-    padding: 60px 0;
-    margin-top: -40px;
-    position: relative;
-    z-index: 3;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
-.stat-item {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.stat-number {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    font-size: 1rem;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-/* Meet Trainers Section */
-.meet-trainers {
-    padding: 80px 0;
-    background: white;
-}
-
-.section-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.section-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--text-light);
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    line-height: 1.7;
-}
-
-/* Filter Buttons */
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
-
-.filter-btn {
-    background: white;
-    border: 2px solid var(--border-color);
-    color: var(--text-dark);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-    font-size: 0.95rem;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--gradient-primary);
-    border-color: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-light);
-}
-
-/* Trainers Grid */
-.trainers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-/* Trainer Cards */
-.trainer-card {
-    background: white;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-    opacity: 1;
-    transform: scale(1);
-}
-
-.trainer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-heavy);
-}
-
-.trainer-card.featured {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 500px;
-}
-
-.trainer-card.featured .trainer-image {
-    height: 100%;
-}
-
-.trainer-card.featured .trainer-info {
-    padding: 2.5rem;
-}
-
-/* Trainer Image */
-.trainer-image {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.trainer-card.featured .trainer-image {
-    height: auto;
-}
-
-.trainer-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(44, 62, 80, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
-    transition: var(--transition);
-}
-
-.trainer-card:hover .trainer-image::before {
-    background: linear-gradient(45deg, rgba(44, 62, 80, 0.2) 0%, rgba(255, 107, 53, 0.2) 100%);
-}
-
-/* Trainer Badges */
-.trainer-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-}
-
-.trainer-badge.head-trainer {
-    background: var(--gradient-primary);
-    color: white;
-}
-
-.trainer-badge.female-trainer {
-    background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
-    color: white;
-}
-
-.trainer-badge.male-trainer {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-    color: white;
-}
-
-/* Trainer Info */
-.trainer-info {
-    padding: 2rem;
-}
-
-.trainer-name {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 0.5rem;
-}
-
-.trainer-title {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-/* Trainer Specialties */
-.trainer-specialties {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.specialty {
-    background: var(--background-light);
-    color: var(--text-dark);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid var(--border-color);
-}
-
-/* Trainer Experience */
-.trainer-experience {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: var(--background-light);
-    border-radius: var(--border-radius);
-}
-
-.exp-item {
-    text-align: center;
-    flex: 1;
-}
-
-.exp-number {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    display: block;
-}
-
-.exp-label {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-/* Trainer Quote */
-.trainer-quote {
-    font-style: italic;
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-left: 4px solid var(--primary-color);
-    background: rgba(255, 107, 53, 0.05);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    line-height: 1.6;
-}
-
-/* Trainer Achievements */
-.trainer-achievements {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.achievement {
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Training Philosophy Section */
-.training-philosophy {
-    background: var(--background-light);
-    padding: 80px 0;
-}
-
-.philosophy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.philosophy-card {
-    background: white;
-    padding: 2.5rem 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-}
-
-.philosophy-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.philosophy-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: white;
-    font-size: 2rem;
-}
-
-.philosophy-card h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.philosophy-card p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-/* Why Choose Trainers Section */
-.why-choose-trainers {
-    padding: 80px 0;
-    background: white;
-}
-
-.reasons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.reason-card {
-    padding: 2.5rem 2rem;
-    border-radius: var(--border-radius);
-    background: white;
-    box-shadow: var(--shadow-light);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.reason-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--gradient-primary);
-    transform: scaleY(0);
-    transition: var(--transition);
-}
-
-.reason-card:hover::before {
-    transform: scaleY(1);
-}
-
-.reason-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.reason-number {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    opacity: 0.3;
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-}
-
-.reason-card h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-    position: relative;
-    z-index: 2;
-}
-
-.reason-card p {
-    color: var(--text-light);
-    line-height: 1.6;
-    position: relative;
-    z-index: 2;
-}
-
-/* Filter Animation */
-.trainer-card.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
-}
-
-.trainer-card.visible {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .trainer-card.featured {
-        grid-column: span 1;
-        display: block;
-    }
-    
-    .trainer-card.featured .trainer-image {
-        height: 300px;
-    }
-    
-    .trainer-card.featured .trainer-info {
-        padding: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .trainers-hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .trainers-hero p {
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .trainers-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .trainer-experience {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .philosophy-grid,
-    .reasons-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .filter-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .container {
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .trainers-hero {
-        padding: 80px 0 60px;
-    }
-    
-    .trainers-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stat-item,
-    .trainer-info,
-    .philosophy-card,
-    .reason-card {
-        padding: 1.5rem;
-    }
-    
-    .trainer-experience {
-        padding: 0.75rem;
-    }
-    
-    .exp-number {
-        font-size: 1.5rem;
-    }
-    
-    .reason-number {
-        font-size: 2rem;
-        top: 0.5rem;
-        right: 1rem;
-    }
-}
-
-/* Animation Keyframes */
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Loading Animation for Filtered Content */
-.trainer-card {
-    animation: fadeInScale 0.5s ease-out;
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* Focus States */
-.filter-btn:focus,
-.trainer-card:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-/* Print Styles */
-@media print {
-    .trainers-hero,
-    .filter-buttons {
-        display: none;
-    }
-    
-    .trainer-card {
-        break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-}
+            color: var(--text-white);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trainers-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .trainers-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .trainers-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .trainers-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--background-light);
+            padding: 60px 0;
+            margin-top: -40px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .stat-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Meet Trainers Section */
+        .meet-trainers {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            border-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+        }
+
+        /* Trainers Grid */
+        .trainers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Trainer Cards */
+        .trainer-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .trainer-card.featured {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+        }
+
+        .trainer-card.featured .trainer-image {
+            height: 100%;
+        }
+
+        .trainer-card.featured .trainer-info {
+            padding: 2.5rem;
+        }
+
+        /* Trainer Image */
+        .trainer-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trainer-card.featured .trainer-image {
+            height: auto;
+        }
+
+        .trainer-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(44, 62, 80, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+            transition: var(--transition);
+        }
+
+        .trainer-card:hover .trainer-image::before {
+            background: linear-gradient(45deg, rgba(44, 62, 80, 0.2) 0%, rgba(255, 107, 53, 0.2) 100%);
+        }
+
+        /* Trainer Badges */
+        .trainer-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .trainer-badge.head-trainer {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .trainer-badge.female-trainer {
+            background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+            color: white;
+        }
+
+        .trainer-badge.male-trainer {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+
+        /* Trainer Info */
+        .trainer-info {
+            padding: 2rem;
+        }
+
+        .trainer-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .trainer-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Trainer Specialties */
+        .trainer-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .specialty {
+            background: var(--background-light);
+            color: var(--text-dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Trainer Experience */
+        .trainer-experience {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+        }
+
+        .exp-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .exp-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .exp-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Trainer Quote */
+        .trainer-quote {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-color);
+            background: rgba(255, 107, 53, 0.05);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            line-height: 1.6;
+        }
+
+        /* Trainer Achievements */
+        .trainer-achievements {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .achievement {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Training Philosophy Section */
+        .training-philosophy {
+            background: var(--background-light);
+            padding: 80px 0;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .philosophy-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .philosophy-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .philosophy-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .philosophy-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Why Choose Trainers Section */
+        .why-choose-trainers {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .reason-card {
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            background: white;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transform: scaleY(0);
+            transition: var(--transition);
+        }
+
+        .reason-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .reason-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            opacity: 0.3;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+        }
+
+        .reason-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            position: relative;
+            z-index: 2;
+        }
+
+        .reason-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Filter Animation */
+        .trainer-card.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .trainer-card.visible {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .trainer-card.featured {
+                grid-column: span 1;
+                display: block;
+            }
+
+            .trainer-card.featured .trainer-image {
+                height: 300px;
+            }
+
+            .trainer-card.featured .trainer-info {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .trainers-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .trainers-hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .trainers-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .trainer-experience {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .philosophy-grid,
+            .reasons-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trainers-hero {
+                padding: 80px 0 60px;
+            }
+
+            .trainers-hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-item,
+            .trainer-info,
+            .philosophy-card,
+            .reason-card {
+                padding: 1.5rem;
+            }
+
+            .trainer-experience {
+                padding: 0.75rem;
+            }
+
+            .exp-number {
+                font-size: 1.5rem;
+            }
+
+            .reason-number {
+                font-size: 2rem;
+                top: 0.5rem;
+                right: 1rem;
+            }
+        }
+
+        /* Animation Keyframes */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Loading Animation for Filtered Content */
+        .trainer-card {
+            animation: fadeInScale 0.5s ease-out;
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus States */
+        .filter-btn:focus,
+        .trainer-card:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print Styles */
+        @media print {
+
+            .trainers-hero,
+            .filter-buttons {
+                display: none;
+            }
+
+            .trainer-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
         /* Footer - Same as home page */
         .footer {
             background: #1a1a1a;
@@ -927,6 +932,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -952,30 +958,41 @@
                 padding: 2rem 0;
                 text-align: left;
             }
-/* Mobile-first enhanced nav-link styling */
-.nav-link {
-    /* position: relative; */
-    margin-left: 20px;
-    display: block;                  /* Ensure full clickable area */
-    padding: 12px 16px;              /* More touch-friendly */
-    font-size: 16px;                 /* Readable on small screens */
-    color: #ffffff;                  /* Light color for visibility */
-    /* background-color: #1e1e2f;           Subtle background */
-    margin-bottom: 8px;              /* Space between links */
-    border-radius: 8px;              /* Smooth corners */
-    text-decoration: none;           /* Remove underlines */
-    transition: background 0.3s ease, transform 0.2s ease;
-}
 
-.nav-link:hover {
-    /* background-color: #33334d;       Highlight on hover */
-    transform: scale(1.03);          /* Subtle zoom effect */
-}
+            /* Mobile-first enhanced nav-link styling */
+            .nav-link {
+                /* position: relative; */
+                margin-left: 20px;
+                display: block;
+                /* Ensure full clickable area */
+                padding: 12px 16px;
+                /* More touch-friendly */
+                font-size: 16px;
+                /* Readable on small screens */
+                color: #ffffff;
+                /* Light color for visibility */
+                /* background-color: #1e1e2f;           Subtle background */
+                margin-bottom: 8px;
+                /* Space between links */
+                border-radius: 8px;
+                /* Smooth corners */
+                text-decoration: none;
+                /* Remove underlines */
+                transition: background 0.3s ease, transform 0.2s ease;
+            }
 
-.nav-link:active {
-    background-color: #444466;       /* Active tap feedback */
-    transform: scale(0.98);          /* Slight shrink */
-}
+            .nav-link:hover {
+                /* background-color: #33334d;       Highlight on hover */
+                transform: scale(1.03);
+                /* Subtle zoom effect */
+            }
+
+            .nav-link:active {
+                background-color: #444466;
+                /* Active tap feedback */
+                transform: scale(0.98);
+                /* Slight shrink */
+            }
 
             .nav-menu.active {
                 left: 0;
@@ -984,7 +1001,8 @@
             .mobile-menu {
                 display: flex;
             }
-            .mobile-menu span{
+
+            .mobile-menu span {
                 background-color: black;
             }
 
@@ -1016,21 +1034,22 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html"> <img src="logo.png" alt="MyCrossFit Logo" class="logo-img"></a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="clients.html" class="nav-link">Success Stories</a></li>
                 <li><a href="#timings" class="nav-link">Timings</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#programs" class="nav-link">Programs</a></li>
-                <li><a href="#trainers" class="nav-link">Our Trainers</a></li>
+                <li><a href="saloon.html" class="nav-link">Blush Me</a></li>
+                <li><a href="trainer.html" class="nav-link">Our Trainers</a></li>
                 <li><a href="#membership" class="nav-link">Membership</a></li>
-                <li><a href="#facilities" class="nav-link">Facilities</a></li>
+                <li><a href="hijama.html" class="nav-link">Hijama</a></li>
                 <li><a href="#nutrition" class="nav-link">Nutrition Plans</a></li>
                 <!-- <li><a href="#blog" class="nav-link">Blog</a></li> -->
             </ul>
@@ -1046,43 +1065,45 @@
     <section class="trainers-hero">
         <div class="container">
             <h1>Meet Our Expert Trainers</h1>
-            <p>Get to know the certified professionals who make MYCROSSFIT Daska's premier fitness destination. Our experienced team is dedicated to helping you achieve your fitness goals safely and effectively.</p>
+            <p>Get to know the certified professionals who make MYCROSSFIT Daska's premier fitness destination. Our
+                experienced team is dedicated to helping you achieve your fitness goals safely and effectively.</p>
         </div>
     </section>
-
     <!-- Stats Section -->
-    <section class="stats-section">
+    <section class="stats-section" id="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <span class="stat-number">8+</span>
+                    <span class="stat-number counter" data-target="15">0</span>+
                     <div class="stat-label">Expert Trainers</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">15+</span>
+                    <span class="stat-number counter" data-target="8">0</span>+
                     <div class="stat-label">Years Combined Experience</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">12+</span>
+                    <span class="stat-number counter" data-target="12">0</span>+
                     <div class="stat-label">Certifications Held</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">500+</span>
+                    <span class="stat-number counter" data-target="500">0</span>+
                     <div class="stat-label">Clients Trained</div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Trainers Section -->
     <section id="trainers" class="meet-trainers">
         <div class="container">
             <h2 class="section-title">Our Training Team</h2>
-            <p class="section-subtitle">Meet our certified fitness professionals who bring expertise, passion, and dedication to help you transform your fitness journey at MYCROSSFIT Daska.</p>
-            
+            <p class="section-subtitle">Meet our certified fitness professionals who bring expertise, passion, and
+                dedication to help you transform your fitness journey at MYCROSSFIT Daska.</p>
+
             <!-- Filter Buttons -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Trainers</button>
+                <!-- <button class="filter-btn active" data-filter="all">All Trainers</button> -->
                 <button class="filter-btn" data-filter="strength">Strength Training</button>
                 <button class="filter-btn" data-filter="weight-loss">Weight Loss</button>
                 <button class="filter-btn" data-filter="crossfit">CrossFit</button>
@@ -1093,11 +1114,12 @@
             <div class="trainers-grid">
                 <!-- Head Trainer -->
                 <div class="trainer-card featured" data-category="strength crossfit">
-                    <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <div class="trainer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="trainer-badge head-trainer">Head Trainer</div>
                     </div>
                     <div class="trainer-info">
-                        <div class="trainer-name">Coach Ahmad Malik</div>
+                        <div class="trainer-name">Coach Dr. Nadeem</div>
                         <div class="trainer-title">Head Trainer & Founder</div>
                         <div class="trainer-specialties">
                             <span class="specialty">CrossFit Level 2</span>
@@ -1106,15 +1128,16 @@
                         </div>
                         <div class="trainer-experience">
                             <div class="exp-item">
-                                <div class="exp-number">5+</div>
+                                <div class="exp-number"10+</div>
                                 <div class="exp-label">Years Experience</div>
                             </div>
                             <div class="exp-item">
-                                <div class="exp-number">200+</div>
+                                <div class="exp-number">500+</div>
                                 <div class="exp-label">Clients Trained</div>
                             </div>
                         </div>
-                        <div class="trainer-quote">"Fitness is not about being better than someone else. It's about being better than you used to be. Let's unlock your potential together!"</div>
+                        <div class="trainer-quote">"Fitness is not about being better than someone else. It's about
+                            being better than you used to be. Let's unlock your potential together!"</div>
                         <div class="trainer-achievements">
                             <div class="achievement">🏆 CrossFit Level 2 Certified</div>
                             <div class="achievement">🎯 NASM Certified Personal Trainer</div>
@@ -1124,11 +1147,12 @@
 
                 <!-- Female Trainers -->
                 <div class="trainer-card" data-category="weight-loss female">
-                    <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="trainer-badge female-trainer">Women's Section</div>
+                    <div class="trainer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    
                     </div>
                     <div class="trainer-info">
-                        <div class="trainer-name">Coach Fatima Shah</div>
+                        <div class="trainer-name">Coach Fareeha Nadeem</div>
                         <div class="trainer-title">Women's Fitness Specialist</div>
                         <div class="trainer-specialties">
                             <span class="specialty">Weight Loss</span>
@@ -1145,7 +1169,8 @@
                                 <div class="exp-label">Women Trained</div>
                             </div>
                         </div>
-                        <div class="trainer-quote">"Every woman deserves to feel strong and confident. I'm here to guide you through your transformation journey with understanding and support."</div>
+                        <div class="trainer-quote">"Every woman deserves to feel strong and confident. I'm here to guide
+                            you through your transformation journey with understanding and support."</div>
                         <div class="trainer-achievements">
                             <div class="achievement">💪 ACE Certified Personal Trainer</div>
                             <div class="achievement">🥗 Precision Nutrition Certified</div>
@@ -1154,8 +1179,9 @@
                 </div>
 
                 <div class="trainer-card" data-category="crossfit female">
-                    <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616c9eab41e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="trainer-badge female-trainer">Women's Section</div>
+                    <div class="trainer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616c9eab41e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                        
                     </div>
                     <div class="trainer-info">
                         <div class="trainer-name">Coach Ayesha Khan</div>
@@ -1175,7 +1201,8 @@
                                 <div class="exp-label">Athletes Coached</div>
                             </div>
                         </div>
-                        <div class="trainer-quote">"Strength training isn't just about lifting weights - it's about lifting yourself up and discovering what you're truly capable of achieving."</div>
+                        <div class="trainer-quote">"Strength training isn't just about lifting weights - it's about
+                            lifting yourself up and discovering what you're truly capable of achieving."</div>
                         <div class="trainer-achievements">
                             <div class="achievement">🏋️ CrossFit Level 1 Certified</div>
                             <div class="achievement">⚡ NSCA Strength & Conditioning</div>
@@ -1185,16 +1212,17 @@
 
                 <!-- Male Trainers -->
                 <div class="trainer-card" data-category="strength">
-                    <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="trainer-badge male-trainer">Men's Section</div>
+                    <div class="trainer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                        
                     </div>
                     <div class="trainer-info">
-                        <div class="trainer-name">Coach Hassan Ali</div>
+                        <div class="trainer-name">Coach Amna Imtiaz</div>
                         <div class="trainer-title">Strength & Conditioning Specialist</div>
                         <div class="trainer-specialties">
-                            <span class="specialty">Powerlifting</span>
-                            <span class="specialty">Bodybuilding</span>
-                            <span class="specialty">Sports Performance</span>
+ <span class="specialty">CrossFit</span>
+                            <span class="specialty">Strength Training</span>
+                            <span class="specialty">Athletic Performance</span>
                         </div>
                         <div class="trainer-experience">
                             <div class="exp-item">
@@ -1206,7 +1234,8 @@
                                 <div class="exp-label">Men Trained</div>
                             </div>
                         </div>
-                        <div class="trainer-quote">"Building strength is a journey of discipline and consistency. Let me help you build not just muscle, but character and confidence."</div>
+                        <div class="trainer-quote">"Building strength is a journey of discipline and consistency. Let me
+                            help you build not just muscle, but character and confidence."</div>
                         <div class="trainer-achievements">
                             <div class="achievement">🏋️ NSCA Certified Strength Coach</div>
                             <div class="achievement">💪 Powerlifting Competitor</div>
@@ -1215,11 +1244,11 @@
                 </div>
 
                 <div class="trainer-card" data-category="weight-loss crossfit">
-                    <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="trainer-badge male-trainer">Men's Section</div>
+                    <div class="trainer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                     </div>
                     <div class="trainer-info">
-                        <div class="trainer-name">Coach Usman Ahmed</div>
+                        <div class="trainer-name">Coach Aqsa Ahmed</div>
                         <div class="trainer-title">CrossFit & Conditioning Coach</div>
                         <div class="trainer-specialties">
                             <span class="specialty">CrossFit</span>
@@ -1236,7 +1265,8 @@
                                 <div class="exp-label">Transformations</div>
                             </div>
                         </div>
-                        <div class="trainer-quote">"Fitness is a lifestyle, not a destination. I'm here to make your fitness journey challenging, fun, and sustainable for life."</div>
+                        <div class="trainer-quote">"Fitness is a lifestyle, not a destination. I'm here to make your
+                            fitness journey challenging, fun, and sustainable for life."</div>
                         <div class="trainer-achievements">
                             <div class="achievement">🎯 CrossFit Level 1 Certified</div>
                             <div class="achievement">🔥 HIIT Specialist Certification</div>
@@ -1245,11 +1275,11 @@
                 </div>
 
                 <div class="trainer-card" data-category="strength">
-                    <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="trainer-badge male-trainer">Men's Section</div>
+                    <div class="trainer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                     </div>
                     <div class="trainer-info">
-                        <div class="trainer-name">Coach Tariq Shah</div>
+                        <div class="trainer-name">Coach Farah Ijaz</div>
                         <div class="trainer-title">Functional Training Specialist</div>
                         <div class="trainer-specialties">
                             <span class="specialty">Functional Movement</span>
@@ -1266,7 +1296,8 @@
                                 <div class="exp-label">Clients Helped</div>
                             </div>
                         </div>
-                        <div class="trainer-quote">"Movement is medicine. My goal is to help you move better, feel better, and live better through functional fitness training."</div>
+                        <div class="trainer-quote">"Movement is medicine. My goal is to help you move better, feel
+                            better, and live better through functional fitness training."</div>
                         <div class="trainer-achievements">
                             <div class="achievement">🏃 Functional Movement Screen Certified</div>
                             <div class="achievement">🔧 Corrective Exercise Specialist</div>
@@ -1287,28 +1318,32 @@
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Personalized Approach</h3>
-                    <p>Every member gets individual attention with customized workout plans tailored to their specific goals, fitness level, and lifestyle.</p>
+                    <p>Every member gets individual attention with customized workout plans tailored to their specific
+                        goals, fitness level, and lifestyle.</p>
                 </div>
                 <div class="philosophy-card">
                     <div class="philosophy-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Safety First</h3>
-                    <p>Our certified trainers prioritize proper form and technique to ensure safe, effective workouts that prevent injuries and maximize results.</p>
+                    <p>Our certified trainers prioritize proper form and technique to ensure safe, effective workouts
+                        that prevent injuries and maximize results.</p>
                 </div>
                 <div class="philosophy-card">
                     <div class="philosophy-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Supportive Community</h3>
-                    <p>We create an encouraging environment where everyone feels welcome, supported, and motivated to achieve their fitness goals together.</p>
+                    <p>We create an encouraging environment where everyone feels welcome, supported, and motivated to
+                        achieve their fitness goals together.</p>
                 </div>
                 <div class="philosophy-card">
                     <div class="philosophy-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <h3>Results-Driven</h3>
-                    <p>Our proven methods and expert guidance ensure you see real, measurable progress towards your fitness and health objectives.</p>
+                    <p>Our proven methods and expert guidance ensure you see real, measurable progress towards your
+                        fitness and health objectives.</p>
                 </div>
             </div>
         </div>
@@ -1322,27 +1357,31 @@
                 <div class="reason-card">
                     <div class="reason-number">01</div>
                     <h3>Certified Professionals</h3>
-                    <p>All our trainers hold internationally recognized certifications and undergo continuous education to stay updated with the latest fitness techniques.</p>
+                    <p>All our trainers hold internationally recognized certifications and undergo continuous education
+                        to stay updated with the latest fitness techniques.</p>
                 </div>
                 <div class="reason-card">
                     <div class="reason-number">02</div>
                     <h3>Local Understanding</h3>
-                    <p>Our trainers understand the unique needs and cultural preferences of Daska residents, creating comfortable and effective training environments.</p>
+                    <p>Our trainers understand the unique needs and cultural preferences of Daska residents, creating
+                        comfortable and effective training environments.</p>
                 </div>
                 <div class="reason-card">
                     <div class="reason-number">03</div>
                     <h3>Flexible Scheduling</h3>
-                    <p>With separate timings for men and women, our trainers accommodate diverse schedules and provide personalized attention during each session.</p>
+                    <p>With separate timings for men and women, our trainers accommodate diverse schedules and provide
+                        personalized attention during each session.</p>
                 </div>
                 <div class="reason-card">
                     <div class="reason-number">04</div>
                     <h3>Proven Track Record</h3>
-                    <p>Our trainers have successfully helped hundreds of clients achieve their fitness goals, from weight loss to strength building and athletic performance.</p>
+                    <p>Our trainers have successfully helped hundreds of clients achieve their fitness goals, from
+                        weight loss to strength building and athletic performance.</p>
                 </div>
             </div>
         </div>
     </section>
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1357,21 +1396,23 @@
                     <ul style="list-style: none;">
                         <li><a href="#home" style="color: #ccc; text-decoration: none;">Home</a></li>
                         <li><a href="clients.html" style="color: #ccc; text-decoration: none;">Success Stories</a></li>
-                        <li><a href="#timings" style="color: #ccc; text-decoration: none;">Timings</a></li>
+                        <li><a href="index.html#timings" style="color: #ccc; text-decoration: none;">Timings</a></li>
                         <li><a href="#about" style="color: #ccc; text-decoration: none;">About</a></li>
-                        <li><a href="program.html" style="color: #ccc; text-decoration: none;">Programs</a></li>
+                        <li><a href="saloon.html" style="color: #ccc; text-decoration: none;">Blush Me</a></li>
                         <li><a href="trainer.html" style="color: #ccc; text-decoration: none;">Our Trainers</a></li>
                         <li><a href="member.html" style="color: #ccc; text-decoration: none;">Membership</a></li>
-                        <li><a href="facilities.html" style="color: #ccc; text-decoration: none;">Facilities</a></li>
-                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a></li>
+                        <li><a href="hijama.html" style="color: #ccc; text-decoration: none;">Hijama</a></li>
+                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a>
+                        </li>
                         <li><a href="#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section"">
                     <h3>Contact Info</h3>
-                    <p  style="padding: 6px;"><i class="fas fa-phone"></i> +92 3216436348</p>
-                    <p  style="padding: 6px;"><i class="fas fa-envelope"></i> info@mycrossfit.com</p>
-                    <p  style="padding: 6px;"><i class="fas fa-map-marker-alt"></i> College Road,Daska, Punjab, Pakistan</p>
+                    <p  style=" padding: 6px;"><i class="fas fa-phone"></i> +92 3216436348</p>
+                    <p style="padding: 6px;"><i class="fas fa-envelope"></i> info@mycrossfit.com</p>
+                    <p style="padding: 6px;"><i class="fas fa-map-marker-alt"></i> College Road,Daska, Punjab, Pakistan
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
@@ -1413,5 +1454,36 @@
             });
         });
 
-        
-        </script>
+        let hasCounted = false;
+
+        function animateCounters() {
+            if (hasCounted) return;
+            hasCounted = true;
+
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 100;
+
+                const update = () => {
+                    if (count < target) {
+                        count += speed;
+                        counter.textContent = Math.ceil(count);
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                update();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const section = document.getElementById('stats');
+            const position = section.getBoundingClientRect();
+            if (position.top < window.innerHeight && position.bottom > 0) {
+                animateCounters();
+            }
+        });
+    </script>
