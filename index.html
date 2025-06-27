@@ -70,7 +70,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.7rem;
             flex-wrap: wrap;
         }
 
@@ -81,7 +81,7 @@
             font-size: 14px;
             transition: all 0.3s ease;
             position: relative;
-            padding: 0.5rem 0;
+            padding: 0.2rem 0;
         }
 
         .nav-link:hover {
@@ -156,7 +156,7 @@
                 text-align: center;
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
+                /* backdrop-filter: blur(10px); */
                 padding: 2rem 0;
                 gap: 1rem;
             }
@@ -262,50 +262,51 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
         }
+
         .gym-stats-section {
-    background: #111;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-  }
+            background: #111;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-  .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #ff6b35;
-  }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff6b35;
+        }
 
-  .stats-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
 
-  .stat-box {
-    flex: 1 1 200px;
-    max-width: 220px;
-    background: #222;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s;
-  }
+        .stat-box {
+            flex: 1 1 200px;
+            max-width: 220px;
+            background: #222;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
 
-  .stat-box:hover {
-    transform: scale(1.05);
-  }
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
 
-  .stat-box h3 {
-    font-size: 2.5rem;
-    color: #25D366;
-    margin-bottom: 10px;
-  }
+        .stat-box h3 {
+            font-size: 2.5rem;
+            color: #25D366;
+            margin-bottom: 10px;
+        }
 
-  .stat-box p {
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
+        .stat-box p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
 
         /* Timings Section */
         .timings {
@@ -473,7 +474,7 @@
         /* Contact Section */
         .contact {
             padding: 5rem 0;
-              background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                 url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
@@ -656,7 +657,7 @@
         .submit-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+background-color: black;
             color: white;
             border: none;
             border-radius: 12px;
@@ -804,8 +805,7 @@
         }
 
         .captcha-question {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+background-color: white;            color: black;
             padding: 15px 20px;
             border-radius: 8px;
             font-size: 18px;
@@ -937,42 +937,45 @@
                 font-size: 24px;
             }
         }
-         .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 28px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: pulse 2s infinite;
-    transition: background 0.3s;
-    text-decoration: none;
-  }
 
-  .whatsapp-float:hover {
-    background-color: #1ebe5d;
-  }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
 
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-  }
+        .whatsapp-float:hover {
+            background-color: #1ebe5d;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
 
         /* Footer */
         .footer {
@@ -1045,37 +1048,32 @@
                 left: -100%;
                 top: 1px;
                 flex-direction: column;
-                background-color: rgba(190, 184, 184, 0.95);
+                background-color: rgba(255, 255, 255, 0.95);
                 width: 85%;
                 height: 2000px;
                 text-align: center;
                 transition: 0.7s;
                 padding: 2rem 0;
                 text-align: left;
-                opacity: 20;
+                /* opacity: 10; */
             }
 
             /* Mobile-first enhanced nav-link styling */
             .nav-link {
-                /* position: relative; */
-                margin-left: 20px;
+                margin-left: 1px;
                 display: block;
-                /* Ensure full clickable area */
-                padding: 12px 16px;
-                /* More touch-friendly */
-                font-size: 18px;
-                /* Readable on small screens */
-                color: #ffffff;
-                /* Light color for visibility */
-                /* background-color: #1e1e2f;   */
+                padding: 2px 10px;
+                font-size: 17px;
+                font-weight: bolder;
+                color: #2b2929;
                 margin-bottom: 8px;
-                /* Space between links */
-                border-radius: 8px;
-                /* Smooth corners */
+                /* border-radius: 8px; */
                 text-decoration: none;
-                /* Remove underlines */
                 transition: background 0.3s ease, transform 0.2s ease;
+                border-bottom: 1.2px solid #948e8e;
+                /* Add underline */
             }
+
 
             .nav-link:hover {
                 /* background-color: #33334d; */
@@ -1085,7 +1083,7 @@
             }
 
             .nav-link:active {
-                background-color: #444466;
+                /* background-color: #444466; */
                 /* Active tap feedback */
                 transform: scale(0.98);
                 /* Slight shrink */
@@ -1154,85 +1152,91 @@
     </nav>
 
     <!-- Hero Section -->
- <section id="home" class="hero">
-  <div class="hero-content">
-    <h1>MYCROSSFIT</h1>
-    <p class="hero-subtitle">Empowering Women’s Fitness & Health in Daska</p>
-    <p>Prioritize your health, boost your confidence, and feel your best in a space designed exclusively for women. Our certified female trainers and holistic programs support your body, mind, and lifestyle goals.</p>
-    <a href="#contact" class="cta-button">Get Started</a>
-  </div>
-</section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>MYCROSSFIT</h1>
+            <p class="hero-subtitle">Empowering Women’s Fitness & Health in Daska</p>
+            <p>Prioritize your health, boost your confidence, and feel your best in a space designed exclusively for
+                women. Our certified female trainers and holistic programs support your body, mind, and lifestyle goals.
+            </p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
 
     <!-- facts -->
-     <!-- Gym Stats Section -->
-<section class="gym-stats-section" id="gym-stats">
-  <h2 class="section-title">Our Gym in Numbers</h2>
-  <div class="stats-container">
-    <div class="stat-box">
-      <h3 class="counter" data-target="1500">0</h3>
-      <p>Club Members</p>
-    </div>
-    <div class="stat-box">
-      <h3 class="counter" data-target="15">0</h3>
-      <p>Club Trainers</p>
-    </div>
-    <div class="stat-box">
-      <h3 class="counter" data-target="40">0</h3>
-      <p>Fitness Classes</p>
-    </div>
-    <div class="stat-box">
-      <h3 class="counter" data-target="100">0</h3>
-      <p>Gym Equipments</p>
-    </div>
-  </div>
-</section>
+    <!-- Gym Stats Section -->
+    <section class="gym-stats-section" id="gym-stats">
+        <h2 class="section-title">Our Gym in Numbers</h2>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3 class="counter" data-target="5000">0</h3>
+                <p>Club Members</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="15">0</h3>
+                <p>Club Trainers</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="40">0</h3>
+                <p>Fitness Classes</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="100">0</h3>
+                <p>Gym Equipments</p>
+            </div>
+        </div>
+    </section>
 
-   <!-- Timings Section -->
-<section id="timings" class="timings">
-  <div class="container">
-    <h2 class="section-title">Gym Timings</h2>
-    <div class="timings-grid">
-      <div class="timing-card">
-        <i class="fas fa-clock"></i>
-        <h3>Operating Hours</h3>
-        <div class="time">9:00 AM - 8:00 PM</div>
-        <p>Our gym is open daily with flexible hours to fit your schedule. Whether you're an early bird or night owl, we've got you covered.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Timings Section -->
+    <section id="timings" class="timings">
+        <div class="container">
+            <h2 class="section-title">Gym Timings</h2>
+            <div class="timings-grid">
+                <div class="timing-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Operating Hours</h3>
+                    <div class="time">9:00 AM - 8:00 PM</div>
+                    <p>Our gym is open daily with flexible hours to fit your schedule. Whether you're an early bird or
+                        night owl, we've got you covered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="about">
-  <div class="container">
-    <div class="about-content">
-      
-      <!-- About Text -->
-      <div class="about-text">
-        <h2>Why Choose MYCROSSFIT Ladies Gym?</h2>
-        <p>
-          Located in the heart of Daska, MYCROSSFIT Ladies Gym & Health Care Center is a space created exclusively for women. Our facility is designed to provide a safe, private, and empowering environment where women of all ages can pursue their fitness and wellness goals with confidence.
-        </p>
-        <p>
-          From strength training to holistic health, our services are guided by experienced and certified female trainers who understand your needs and support your journey every step of the way.
-        </p>
-        <ul class="features">
-          <li><i class="fas fa-check-circle"></i> Women-only gym and wellness space</li>
-          <li><i class="fas fa-check-circle"></i> Certified female personal trainers</li>
-          <li><i class="fas fa-check-circle"></i> Comfortable, safe, and private environment</li>
-          <li><i class="fas fa-check-circle"></i> Modern equipment & health-focused programs</li>
-          <li><i class="fas fa-check-circle"></i> Flexible timings for busy routines</li>
-          <li><i class="fas fa-check-circle"></i> Located centrally in Daska</li>
-        </ul>
-      </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
 
-      <!-- About Image -->
-      <div class="about-image">
-        <img src="girls.avif" alt="Ladies Working Out in Gym">
-      </div>
-    </div>
-  </div>
-</section>
+                <!-- About Text -->
+                <div class="about-text">
+                    <h2>Why Choose MYCROSSFIT Ladies Gym?</h2>
+                    <p>
+                        Located in the heart of Daska, MYCROSSFIT Ladies Gym & Health Care Center is a space created
+                        exclusively for women. Our facility is designed to provide a safe, private, and empowering
+                        environment where women of all ages can pursue their fitness and wellness goals with confidence.
+                    </p>
+                    <p>
+                        From strength training to holistic health, our services are guided by experienced and certified
+                        female trainers who understand your needs and support your journey every step of the way.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle"></i> Women-only gym and wellness space</li>
+                        <li><i class="fas fa-check-circle"></i> Certified female personal trainers</li>
+                        <li><i class="fas fa-check-circle"></i> Comfortable, safe, and private environment</li>
+                        <li><i class="fas fa-check-circle"></i> Modern equipment & health-focused programs</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible timings for busy routines</li>
+                        <li><i class="fas fa-check-circle"></i> Located centrally in Daska</li>
+                    </ul>
+                </div>
+
+                <!-- About Image -->
+                <div class="about-image">
+                    <img src="girls.avif" alt="Ladies Working Out in Gym">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -1260,14 +1264,14 @@
                 </div>
             </div>
 
-            <div class="contact-info">
+            <div class="contact-info" id="cont">
                 <h3><i class="fas fa-users"></i> Join Our Community</h3>
                 <p>Ready to start your fitness journey? Contact us today to learn more about our membership plans
                     and facilities. We're here to help you achieve your fitness goals!</p>
                 <a href="tel:+923216436348" class="cta-button">Call Now</a>
 
                 <div class="form-container">
-                    <h2 class="form-title">Contact Us</h2>
+                    <h2 class="form-title">Get in Touch</h2>
                     <form class="contact-form" id="contactForm" novalidate>
                         <div class="input-group">
                             <input type="text" name="name" id="name" class="input-field" placeholder="Your Full Name"
@@ -1348,12 +1352,12 @@
         </div>
     </div>
     <!-- WhatsApp Chat Button -->
-<a href="https://wa.me/923216436348" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/923216436348" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<!-- Font Awesome for the WhatsApp icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome for the WhatsApp icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Footer -->
     <footer class="footer">
@@ -1362,7 +1366,8 @@
                 <div class="footer-section">
                     <img src="logo.png" alt="MyCrossFit Logo" width="130px">
                     <!-- <h3>jwshjwgjdgj</h3> -->
-                    <p>Your premier fitness and wellness destination for women in Daska. Transform your body, elevate your mind, and achieve your goals in a space designed exclusively for women.</p>
+                    <p>Your premier fitness and wellness destination for women in Daska. Transform your body, elevate
+                        your mind, and achieve your goals in a space designed exclusively for women.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -1375,22 +1380,24 @@
                         <li><a href="trainer.html" style="color: #ccc; text-decoration: none;">Our Trainers</a></li>
                         <li><a href="member.html" style="color: #ccc; text-decoration: none;">Membership</a></li>
                         <li><a href="hijama.html" style="color: #ccc; text-decoration: none;">Hijama</a></li>
-                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a></li>
+                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a>
+                        </li>
                         <li><a href="#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section"">
                     <h3>Contact Info</h3>
-                    <p  style="padding: 6px;"><i class="fas fa-phone"></i> +92 3216436348</p>
-                    <p  style="padding: 6px;"><i class="fas fa-envelope"></i> info@mycrossfit.com</p>
-                    <p  style="padding: 6px;"><i class="fas fa-map-marker-alt"></i> College Road,Daska, Punjab, Pakistan</p>
+                    <p  style=" padding: 6px;"><i class="fas fa-phone"></i> +92 3216436348</p>
+                    <p style="padding: 6px;"><i class="fas fa-envelope"></i> info@mycrossfit.com</p>
+                    <p style="padding: 6px;"><i class="fas fa-map-marker-alt"></i> College Road,Daska, Punjab, Pakistan
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="https://facebook.com/mycrossfit" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/mycrossfit" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/mycrossfit" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/share/1AzHYAE8ii/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mycrossfitladiesgym?igsh=NWU1aHRybDUyeHd3" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@mycrossfit1829?si=aLhWYhXIdtgfWqie" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -1425,40 +1432,40 @@
             });
         });
 
-const counters = document.querySelectorAll('.counter');
-  let counted = false;
+        const counters = document.querySelectorAll('.counter');
+        let counted = false;
 
-  function runCounter() {
-    if (counted) return;
-    counted = true;
+        function runCounter() {
+            if (counted) return;
+            counted = true;
 
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = 0;
-      const speed = target / 100;
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 100;
 
-      const update = () => {
-        if (count < target) {
-          count += speed;
-          counter.textContent = Math.ceil(count);
-          requestAnimationFrame(update);
-        } else {
-          counter.textContent = target;
+                const update = () => {
+                    if (count < target) {
+                        count += speed;
+                        counter.textContent = Math.ceil(count);
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                update();
+            });
         }
-      };
 
-      update();
-    });
-  }
-
-  // Trigger when in viewport
-  window.addEventListener('scroll', () => {
-    const section = document.getElementById('gym-stats');
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom >= 0) {
-      runCounter();
-    }
-  });
+        // Trigger when in viewport
+        window.addEventListener('scroll', () => {
+            const section = document.getElementById('gym-stats');
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                runCounter();
+            }
+        });
         // Animate timing cards on scroll
         const observerOptions = {
             threshold: 0.1,
