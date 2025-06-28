@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Success Stories - MYCROSSFIT Daska</title>
+    <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -236,35 +239,38 @@
             padding: 0 2rem;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 4rem 0;
-            color: white;
-        }
+     /* Stats Section */
+.stats-section {
+    background: #000; /* black background */
+    padding: 4rem 0;
+    color: white;
+}
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
 
-        .stat-item {
-            padding: 2rem;
-        }
+.stat-item {
+    padding: 2rem;
+    background-color: #1e1e1e; /* dark gray background for each item */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #ff6b35;
-            display: block;
-        }
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1bf18d; /* green */
+    display: block;
+    margin-bottom: 0.5rem;
+}
 
-        .stat-label {
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-        }
+.stat-label {
+    font-size: 1.9rem;
+}
 
         /* Success Stories Section */
         .success-stories {
@@ -476,6 +482,45 @@
             color: #ffd700;
             margin-bottom: 1rem;
         }
+         .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1ebe5d;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
 
         /* Footer - Same as home page */
         .footer {
@@ -630,6 +675,48 @@
                 padding: 0 1rem;
             }
         }
+         #backToTop {
+            position: fixed;
+            bottom: 30px;
+            left: 4%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 16px 18px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            display: none;
+            transition: transform 0.3s ease;
+            animation: puls 2.5s infinite ease-in-out;
+        }
+
+        #backToTop:hover {
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        @keyframes puls {
+            0% {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 37, 37, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+        @media (max-width:786px) {
+            #backToTop{
+                margin-left: 7%;
+                padding: 20px 22px;
+            }
+        }
     </style>
 </head>
 
@@ -646,9 +733,9 @@
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                 <li><a href="saloon.html" class="nav-link">Blush Me</a></li>
                 <li><a href="trainer.html" class="nav-link">Our Trainers</a></li>
-                <li><a href="#membership" class="nav-link">Membership</a></li>
+                <li><a href="member.html" class="nav-link">Membership</a></li>
                 <li><a href="hijama.html" class="nav-link">Hijama</a></li>
-                <li><a href="#nutrition" class="nav-link">Nutrition Plans</a></li>
+                <li><a href="studio.html" class="nav-link">MyCrossFit Studio</a></li>
                 <!-- <li><a href="#blog" class="nav-link">Blog</a></li> -->
             </ul>
             <div class="mobile-menu" id="mobile-menu">
@@ -668,39 +755,63 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">2500kg</span>
-                    <div class="stat-label">Total Weight Lost</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">1200kg</span>
-                    <div class="stat-label">Muscle Gained</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-            </div>
-        </div>
-    </section>
+   <!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid" data-aos="zoom-in">
+      <div class="stat-item">
+        <span class="stat-number" data-target="3500" data-suffix="+">0</span>
+        <div class="stat-label" style="color: white;">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="2500" data-suffix="kg">0</span>
+        <div class="stat-label" style="color: white;">Total Weight Lost</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="1200" data-suffix="kg">0</span>
+        <div class="stat-label" style="color: white;">Muscle Gained</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98" data-suffix="%">0</span>
+        <div class="stat-label" style="color: white;">Success Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const counters = document.querySelectorAll(".stat-number");
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    const suffix = counter.getAttribute("data-suffix") || "";
+    let count = 0;
+
+    const updateCount = () => {
+      const increment = target / 100;
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count) + suffix;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target.toLocaleString() + suffix;
+      }
+    };
+
+    updateCount();
+  });
+</script>
+
 
     <!-- Success Stories Section -->
     <section id="clients" class="success-stories">
         <div class="container">
-            <h2 class="section-title">Transformation Stories</h2>
-            <p class="section-subtitle">Meet our incredible members who achieved their fitness goals with dedication,
+            <h2 class="section-title" data-aos="zoom-in">Transformation Stories</h2>
+            <p class="section-subtitle" data-aos="zoom-in">Meet our incredible members who achieved their fitness goals with dedication,
                 hard work, and our expert guidance at MYCROSSFIT Daska.</p>
 
             <!-- Filter Buttons -->
-            <div class="filter-buttons">
+            <div class="filter-buttons" data-aos="zoom-in">
                 <button class="filter-btn active" data-filter="all">All Stories</button>
                 <button class="filter-btn" data-filter="weight-loss">Weight Loss</button>
                 <button class="filter-btn" data-filter="weight-gain">Weight Gain</button>
@@ -711,7 +822,7 @@
             <div class="clients-grid">
                 <!-- Weight Loss Success Stories -->
                 <div class="client-card" data-category="weight-loss">
-                    <div class="client-image"
+                    <div class="client-image" data-aos="zoom-in"
                         style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-loss">-25kg Lost</div>
                     </div>
@@ -740,7 +851,7 @@
                 </div>
 
                 <div class="client-card" data-category="weight-loss">
-                    <div class="client-image"
+                    <div class="client-image" data-aos="zoom-in"
                         style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-loss">-18kg Lost</div>
                     </div>
@@ -769,7 +880,7 @@
 
                 <!-- Weight Gain Success Stories -->
                 <div class="client-card" data-category="weight-gain">
-                    <div class="client-image"
+                    <div class="client-image" data-aos="zoom-in"
                         style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-gain">+15kg Gained</div>
                     </div>
@@ -798,7 +909,7 @@
                 </div>
 
                 <div class="client-card" data-category="weight-gain">
-                    <div class="client-image"
+                    <div class="client-image" data-aos="zoom-in"
                         style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge weight-gain">+12kg Gained</div>
                     </div>
@@ -827,7 +938,7 @@
 
                 <!-- Muscle Building Success Stories -->
                 <div class="client-card" data-category="muscle-gain">
-                    <div class="client-image"
+                    <div class="client-image" data-aos="zoom-in"
                         style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge muscle-gain">Muscle Built</div>
                     </div>
@@ -855,7 +966,7 @@
                 </div>
 
                 <div class="client-card" data-category="muscle-gain">
-                    <div class="client-image"
+                    <div class="client-image" data-aos="zoom-in"
                         style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                         <div class="transformation-badge muscle-gain">Strength Gained</div>
                     </div>
@@ -888,9 +999,9 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <h2 class="section-title" data-aos="zoom-in">What Our Clients Say</h2>
             <div class="testimonial-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="zoom-in">
                     <div class="rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -904,7 +1015,7 @@
                         Highly recommended for any woman serious about her health!"</div>
                     <div class="testimonial-author">- Nadia Sheikh</div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="zoom-in">
                     <div class="rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -917,7 +1028,7 @@
                         focus on women’s health and wellness is truly impressive. Highly recommended!"</div>
                     <div class="testimonial-author">- Iqra Ijaz</div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="zoom-in">
                     <div class="rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -934,6 +1045,10 @@
             </div>
         </div>
     </section>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/923216436348" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
@@ -948,17 +1063,17 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul style="list-style: none;">
-                        <li><a href="#home" style="color: #ccc; text-decoration: none;">Home</a></li>
+                        <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
                         <li><a href="clients.html" style="color: #ccc; text-decoration: none;">Success Stories</a></li>
-                        <li><a href="#timings" style="color: #ccc; text-decoration: none;">Timings</a></li>
-                        <li><a href="#about" style="color: #ccc; text-decoration: none;">About</a></li>
+                        <li><a href="index.html#timings" style="color: #ccc; text-decoration: none;">Timings</a></li>
+                        <li><a href="index.html#about" style="color: #ccc; text-decoration: none;">About</a></li>
                         <li><a href="saloon.html" style="color: #ccc; text-decoration: none;">Blush Me</a></li>
                         <li><a href="trainer.html" style="color: #ccc; text-decoration: none;">Our Trainers</a></li>
                         <li><a href="member.html" style="color: #ccc; text-decoration: none;">Membership</a></li>
                         <li><a href="hijama.html" style="color: #ccc; text-decoration: none;">Hijama</a></li>
-                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a>
+                        <li><a href="studio.html" style="color: #ccc; text-decoration: none;">MyCrossFit Studio</a>
                         </li>
-                        <li><a href="#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
+                        <li><a href="index.html#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section"">
@@ -982,7 +1097,34 @@
             </div>
         </div>
     </footer>
+     <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script>
 
+        // Show button on scroll
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top smoothly
+        backToTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+
+    </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
     <script>
         // Mobile menu toggle
         const mobileMenu = document.querySelector('.mobile-menu');

@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Trainers - MYCROSSFIT Daska</title>
+    <title> Our Trainers - MYCROSSFIT Daska</title>
+    <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -288,50 +290,39 @@
             line-height: 1.7;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: var(--background-light);
-            padding: 60px 0;
-            margin-top: -40px;
-            position: relative;
-            z-index: 3;
-        }
+       /* Stats Section */
+.stats-section {
+    background: #000; /* black background */
+    padding: 4rem 0;
+    color: white;
+}
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
 
-        .stat-item {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-        }
+.stat-item {
+    padding: 1rem;
+    background-color: #1e1e1e; /* dark gray background for each item */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 230px;
+}
 
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
+.stat-number {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #12c973; /* green */
+    display: block;
+    margin-bottom: 0.5rem;
+}
 
-        .stat-number {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
+.stat-label {
+    font-size: 1.3rem;
+}
 
         /* Meet Trainers Section */
         .meet-trainers {
@@ -405,6 +396,9 @@
             border: 1px solid var(--border-color);
             opacity: 1;
             transform: scale(1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .trainer-card:hover {
@@ -412,19 +406,11 @@
             box-shadow: var(--shadow-heavy);
         }
 
+        /* Uniform featured cards */
         .trainer-card.featured {
-            grid-column: span 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 500px;
-        }
-
-        .trainer-card.featured .trainer-image {
-            height: 100%;
-        }
-
-        .trainer-card.featured .trainer-info {
-            padding: 2.5rem;
+            grid-column: auto;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Trainer Image */
@@ -434,10 +420,9 @@
             background-position: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .trainer-card.featured .trainer-image {
-            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .trainer-image::before {
@@ -453,6 +438,17 @@
 
         .trainer-card:hover .trainer-image::before {
             background: linear-gradient(45deg, rgba(44, 62, 80, 0.2) 0%, rgba(255, 107, 53, 0.2) 100%);
+        }
+
+        /* Female icon wrapper */
+        .icon-wrapper {
+            background: none;
+        }
+
+        /* FontAwesome Icon (passport style) */
+        .female-passport-icon {
+            font-size: 100px;
+            color: #ec407a;
         }
 
         /* Trainer Badges */
@@ -487,6 +483,10 @@
         /* Trainer Info */
         .trainer-info {
             padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .trainer-name {
@@ -578,6 +578,7 @@
             align-items: center;
             gap: 0.5rem;
         }
+
 
         /* Training Philosophy Section */
         .training-philosophy {
@@ -678,6 +679,36 @@
             box-shadow: var(--shadow-medium);
         }
 
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .reason-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            position: relative;
+        }
+
+        .reason-icon i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .reason-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
         .reason-number {
             font-family: 'Oswald', sans-serif;
             font-size: 3rem;
@@ -747,10 +778,13 @@
             .section-title {
                 font-size: 2rem;
             }
-
+.stat-item{
+    margin-left: 65px;
+}
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
+                
             }
 
             .trainers-grid {
@@ -875,6 +909,46 @@
             }
         }
 
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1ebe5d;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+
         /* Footer - Same as home page */
         .footer {
             background: #1a1a1a;
@@ -887,6 +961,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
             margin-bottom: 2rem;
+            margin-left: 10px;
         }
 
         .footer-section h3 {
@@ -1028,6 +1103,48 @@
                 padding: 0 1rem;
             }
         }
+         #backToTop {
+            position: fixed;
+            bottom: 30px;
+            left: 4%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 16px 18px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            display: none;
+            transition: transform 0.3s ease;
+            animation: puls 2.5s infinite ease-in-out;
+        }
+
+        #backToTop:hover {
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        @keyframes puls {
+            0% {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 37, 37, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+        @media (max-width:786px) {
+            #backToTop{
+                margin-left: 7%;
+                padding: 20px 22px;
+            }
+        }
     </style>
 </head>
 
@@ -1039,14 +1156,14 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="clients.html" class="nav-link">Success Stories</a></li>
-                <li><a href="#timings" class="nav-link">Timings</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#timings" class="nav-link">Timings</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                 <li><a href="saloon.html" class="nav-link">Blush Me</a></li>
                 <li><a href="trainer.html" class="nav-link">Our Trainers</a></li>
-                <li><a href="#membership" class="nav-link">Membership</a></li>
+                <li><a href="member.html" class="nav-link">Membership</a></li>
                 <li><a href="hijama.html" class="nav-link">Hijama</a></li>
-                <li><a href="#nutrition" class="nav-link">Nutrition Plans</a></li>
+                <li><a href="studio.html" class="nav-link">MyCrossFit Studio</a></li>
                 <!-- <li><a href="#blog" class="nav-link">Blog</a></li> -->
             </ul>
             <div class="mobile-menu" id="mobile-menu">
@@ -1065,318 +1182,281 @@
                 experienced team is dedicated to helping you achieve your fitness goals safely and effectively.</p>
         </div>
     </section>
-    <!-- Stats Section -->
-    <section class="stats-section" id="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="15">0</span>+
-                    <div class="stat-label">Expert Trainers</div>
+   <!-- Stats Section -->
+<section class="stats-section">
+  <div class="container" data-aos="zoom-in">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="15" data-suffix="+">0</span>
+        <div class="stat-label" style="color: white;">Expert Trainers</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="8" data-suffix="+">0</span>
+        <div class="stat-label" style="color: white;">Years Combined Experience</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="15" data-suffix="+">0</span>
+        <div class="stat-label" style="color: white;">Certifications Held</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="2500" data-suffix="+">0</span>
+        <div class="stat-label" style="color: white;">Clients Trained</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const counters = document.querySelectorAll(".stat-number");
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    const suffix = counter.getAttribute("data-suffix") || "";
+    let count = 0;
+
+    const updateCount = () => {
+      const increment = target / 100;
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count) + suffix;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target.toLocaleString() + suffix;
+      }
+    };
+
+    updateCount();
+  });
+</script>
+
+    <div class="trainers-grid">
+        <!-- Trainer 1 -->
+        <div class="trainer-card" data-category="strength crossfit">
+            <div class="trainer-image" data-aos="zoom-in"
+                style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                <div class="trainer-badge head-trainer">Head Trainer</div>
+            </div>
+            <div class="trainer-info">
+                <div class="trainer-name">Dr. M. Nadeem <span style="font-weight: normal;">(Gold Medalist)</span></div>
+                <div class="trainer-title">Head Trainer & Founder</div>
+                <div class="trainer-specialties">
+                    <span class="specialty">Hijamah Therapist</span>
+                    <span class="specialty">Herbalist (F.T.J)</span>
+                    <span class="specialty">CrossFit Level 2</span>
+                    <span class="specialty">Strength & Conditioning</span>
+                    <span class="specialty">Olympic Lifting</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="8">0</span>+
-                    <div class="stat-label">Years Combined Experience</div>
+                <div class="trainer-experience">
+                    <div class="exp-item">
+                        <div class="exp-number">10+</div>
+                        <div class="exp-label">Years Experience</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-number">500+</div>
+                        <div class="exp-label">Clients Trained</div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="12">0</span>+
-                    <div class="stat-label">Certifications Held</div>
+                <div class="trainer-quote">
+                    "Fitness is not about being better than someone else. It's about being better than you used to be.
+                    Let's unlock your potential together!"
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="500">0</span>+
-                    <div class="stat-label">Clients Trained</div>
+                <div class="trainer-achievements">
+                    <div class="achievement">🏆 CrossFit Level 2 Certified</div>
+                    <div class="achievement">🎯 NASM Certified Personal Trainer</div>
+                    <div class="achievement">💪 2× Certified Fitness Trainer (IFCA UK)</div>
+                    <div class="achievement">🥗 Certified Sports Nutrition (IFCA UK)</div>
+                    <div class="achievement">🧴 Certified in Hair Treatment Techniques</div>
                 </div>
             </div>
         </div>
-    </section>
 
-
-    <!-- Trainers Section -->
-    <section id="trainers" class="meet-trainers">
-        <div class="container">
-            <h2 class="section-title">Our Training Team</h2>
-            <p class="section-subtitle">Meet our certified fitness professionals who bring expertise, passion, and
-                dedication to help you transform your fitness journey at MYCROSSFIT Daska.</p>
-
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <!-- <button class="filter-btn active" data-filter="all">All Trainers</button> -->
-                <button class="filter-btn" data-filter="strength">Strength Training</button>
-                <button class="filter-btn" data-filter="weight-loss">Weight Loss</button>
-                <button class="filter-btn" data-filter="crossfit">CrossFit</button>
-                <button class="filter-btn" data-filter="female">Female Trainers</button>
+        <!-- Trainer 2 -->
+        <div class="trainer-card" data-category="weight-loss female">
+            <div class="trainer-image icon-wrapper" data-aos="zoom-in">
+                <i class="fas fa-user-tie female-passport-icon"></i>
+                <div class="trainer-badge female-trainer">Admin</div>
             </div>
-
-            <!-- Trainers Grid -->
-            <div class="trainers-grid">
-                <!-- Head Trainer -->
-                <div class="trainer-card featured" data-category="strength crossfit">
-                    <div class="trainer-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="trainer-badge head-trainer">Head Trainer</div>
+            <div class="trainer-info">
+                <div class="trainer-name">Mrs. Fareeha Nadeem</div>
+                <div class="trainer-title">Women's Fitness Specialist & Admin</div>
+                <div class="trainer-specialties">
+                    <span class="specialty">Herbalist (F.T.J)</span>
+                    <span class="specialty">Hijamah Therapist</span>
+                    <span class="specialty">Weight Loss</span>
+                    <span class="specialty">Functional Training</span>
+                    <span class="specialty">Nutrition Coaching</span>
+                </div>
+                <div class="trainer-experience">
+                    <div class="exp-item">
+                        <div class="exp-number">3+</div>
+                        <div class="exp-label">Years Experience</div>
                     </div>
-                    <div class="trainer-info">
-                        <div class="trainer-name">Coach Dr. Nadeem</div>
-                        <div class="trainer-title">Head Trainer & Founder</div>
-                        <div class="trainer-specialties">
-                            <span class="specialty">CrossFit Level 2</span>
-                            <span class="specialty">Strength & Conditioning</span>
-                            <span class="specialty">Olympic Lifting</span>
-                        </div>
-                        <div class="trainer-experience">
-                            <div class="exp-item">
-                                <div class="exp-number"10+</div>
-                                <div class="exp-label">Years Experience</div>
-                            </div>
-                            <div class="exp-item">
-                                <div class="exp-number">500+</div>
-                                <div class="exp-label">Clients Trained</div>
-                            </div>
-                        </div>
-                        <div class="trainer-quote">"Fitness is not about being better than someone else. It's about
-                            being better than you used to be. Let's unlock your potential together!"</div>
-                        <div class="trainer-achievements">
-                            <div class="achievement">🏆 CrossFit Level 2 Certified</div>
-                            <div class="achievement">🎯 NASM Certified Personal Trainer</div>
-                        </div>
+                    <div class="exp-item">
+                        <div class="exp-number">100+</div>
+                        <div class="exp-label">Women Trained</div>
                     </div>
                 </div>
-
-                <!-- Female Trainers -->
-                <div class="trainer-card" data-category="weight-loss female">
-                    <div class="trainer-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                    
-                    </div>
-                    <div class="trainer-info">
-                        <div class="trainer-name">Coach Fareeha Nadeem</div>
-                        <div class="trainer-title">Women's Fitness Specialist</div>
-                        <div class="trainer-specialties">
-                            <span class="specialty">Weight Loss</span>
-                            <span class="specialty">Functional Training</span>
-                            <span class="specialty">Nutrition Coaching</span>
-                        </div>
-                        <div class="trainer-experience">
-                            <div class="exp-item">
-                                <div class="exp-number">3+</div>
-                                <div class="exp-label">Years Experience</div>
-                            </div>
-                            <div class="exp-item">
-                                <div class="exp-number">100+</div>
-                                <div class="exp-label">Women Trained</div>
-                            </div>
-                        </div>
-                        <div class="trainer-quote">"Every woman deserves to feel strong and confident. I'm here to guide
-                            you through your transformation journey with understanding and support."</div>
-                        <div class="trainer-achievements">
-                            <div class="achievement">💪 ACE Certified Personal Trainer</div>
-                            <div class="achievement">🥗 Precision Nutrition Certified</div>
-                        </div>
-                    </div>
+                <div class="trainer-quote">
+                    "Every woman deserves to feel strong and confident. I'm here to guide you through your
+                    transformation journey with understanding and support."
                 </div>
-
-                <div class="trainer-card" data-category="crossfit female">
-                    <div class="trainer-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616c9eab41e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        
-                    </div>
-                    <div class="trainer-info">
-                        <div class="trainer-name">Coach Ayesha Khan</div>
-                        <div class="trainer-title">CrossFit & Strength Coach</div>
-                        <div class="trainer-specialties">
-                            <span class="specialty">CrossFit</span>
-                            <span class="specialty">Strength Training</span>
-                            <span class="specialty">Athletic Performance</span>
-                        </div>
-                        <div class="trainer-experience">
-                            <div class="exp-item">
-                                <div class="exp-number">4+</div>
-                                <div class="exp-label">Years Experience</div>
-                            </div>
-                            <div class="exp-item">
-                                <div class="exp-number">80+</div>
-                                <div class="exp-label">Athletes Coached</div>
-                            </div>
-                        </div>
-                        <div class="trainer-quote">"Strength training isn't just about lifting weights - it's about
-                            lifting yourself up and discovering what you're truly capable of achieving."</div>
-                        <div class="trainer-achievements">
-                            <div class="achievement">🏋️ CrossFit Level 1 Certified</div>
-                            <div class="achievement">⚡ NSCA Strength & Conditioning</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Male Trainers -->
-                <div class="trainer-card" data-category="strength">
-                    <div class="trainer-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        
-                    </div>
-                    <div class="trainer-info">
-                        <div class="trainer-name">Coach Amna Imtiaz</div>
-                        <div class="trainer-title">Strength & Conditioning Specialist</div>
-                        <div class="trainer-specialties">
- <span class="specialty">CrossFit</span>
-                            <span class="specialty">Strength Training</span>
-                            <span class="specialty">Athletic Performance</span>
-                        </div>
-                        <div class="trainer-experience">
-                            <div class="exp-item">
-                                <div class="exp-number">4+</div>
-                                <div class="exp-label">Years Experience</div>
-                            </div>
-                            <div class="exp-item">
-                                <div class="exp-number">150+</div>
-                                <div class="exp-label">Men Trained</div>
-                            </div>
-                        </div>
-                        <div class="trainer-quote">"Building strength is a journey of discipline and consistency. Let me
-                            help you build not just muscle, but character and confidence."</div>
-                        <div class="trainer-achievements">
-                            <div class="achievement">🏋️ NSCA Certified Strength Coach</div>
-                            <div class="achievement">💪 Powerlifting Competitor</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trainer-card" data-category="weight-loss crossfit">
-                    <div class="trainer-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                    </div>
-                    <div class="trainer-info">
-                        <div class="trainer-name">Coach Aqsa Ahmed</div>
-                        <div class="trainer-title">CrossFit & Conditioning Coach</div>
-                        <div class="trainer-specialties">
-                            <span class="specialty">CrossFit</span>
-                            <span class="specialty">HIIT Training</span>
-                            <span class="specialty">Weight Loss</span>
-                        </div>
-                        <div class="trainer-experience">
-                            <div class="exp-item">
-                                <div class="exp-number">3+</div>
-                                <div class="exp-label">Years Experience</div>
-                            </div>
-                            <div class="exp-item">
-                                <div class="exp-number">120+</div>
-                                <div class="exp-label">Transformations</div>
-                            </div>
-                        </div>
-                        <div class="trainer-quote">"Fitness is a lifestyle, not a destination. I'm here to make your
-                            fitness journey challenging, fun, and sustainable for life."</div>
-                        <div class="trainer-achievements">
-                            <div class="achievement">🎯 CrossFit Level 1 Certified</div>
-                            <div class="achievement">🔥 HIIT Specialist Certification</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trainer-card" data-category="strength">
-                    <div class="trainer-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                    </div>
-                    <div class="trainer-info">
-                        <div class="trainer-name">Coach Farah Ijaz</div>
-                        <div class="trainer-title">Functional Training Specialist</div>
-                        <div class="trainer-specialties">
-                            <span class="specialty">Functional Movement</span>
-                            <span class="specialty">Injury Prevention</span>
-                            <span class="specialty">Rehabilitation</span>
-                        </div>
-                        <div class="trainer-experience">
-                            <div class="exp-item">
-                                <div class="exp-number">2+</div>
-                                <div class="exp-label">Years Experience</div>
-                            </div>
-                            <div class="exp-item">
-                                <div class="exp-number">75+</div>
-                                <div class="exp-label">Clients Helped</div>
-                            </div>
-                        </div>
-                        <div class="trainer-quote">"Movement is medicine. My goal is to help you move better, feel
-                            better, and live better through functional fitness training."</div>
-                        <div class="trainer-achievements">
-                            <div class="achievement">🏃 Functional Movement Screen Certified</div>
-                            <div class="achievement">🔧 Corrective Exercise Specialist</div>
-                        </div>
-                    </div>
+                <div class="trainer-achievements">
+                    <div class="achievement">💪 Certified Fitness Trainer (IFCA UK)</div>
+                    <div class="achievement">💅 Certified Beautician (AIMS)</div>
+                    <div class="achievement">💇 Certified in Hair Grooming Techniques (AIMS)</div>
+                    <div class="achievement">🧴 Certified in Hair Treatments</div>
+                    <div class="achievement">🏢 Admin – MYCROSSFIT Ladies Gym</div>
+                    <div class="achievement">💖 Admin – Blush Me Salon</div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Trainer 3 -->
+        <div class="trainer-card" data-category="strength">
+            <div class="trainer-image" data-aos="zoom-in"
+                style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+            </div>
+            <div class="trainer-info">
+                <div class="trainer-name">Coach Amna Imtiaz</div>
+                <div class="trainer-title">Strength & Conditioning Specialist</div>
+                <div class="trainer-specialties">
+                    <span class="specialty">CrossFit</span>
+                    <span class="specialty">Strength Training</span>
+                    <span class="specialty">Athletic Performance</span>
+                </div>
+                <div class="trainer-experience">
+                    <div class="exp-item">
+                        <div class="exp-number">4+</div>
+                        <div class="exp-label">Years Experience</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-number">150+</div>
+                        <div class="exp-label">Men Trained</div>
+                    </div>
+                </div>
+                <div class="trainer-quote">"Building strength is a journey of discipline and consistency. Let me help
+                    you build not just muscle, but character and confidence."</div>
+                <div class="trainer-achievements">
+                    <div class="achievement">🏋️ NSCA Certified Strength Coach</div>
+                    <div class="achievement">💪 Powerlifting Competitor</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trainer 4 -->
+        <div class="trainer-card" data-category="weight-loss crossfit">
+            <div class="trainer-image" data-aos="zoom-in"
+                style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+            </div>
+            <div class="trainer-info">
+                <div class="trainer-name">Coach Aqsa Ahmed</div>
+                <div class="trainer-title">CrossFit & Conditioning Coach</div>
+                <div class="trainer-specialties">
+                    <span class="specialty">CrossFit</span>
+                    <span class="specialty">HIIT Training</span>
+                    <span class="specialty">Weight Loss</span>
+                </div>
+                <div class="trainer-experience">
+                    <div class="exp-item">
+                        <div class="exp-number">3+</div>
+                        <div class="exp-label">Years Experience</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-number">120+</div>
+                        <div class="exp-label">Transformations</div>
+                    </div>
+                </div>
+                <div class="trainer-quote">"Fitness is a lifestyle, not a destination. I'm here to make your fitness
+                    journey challenging, fun, and sustainable for life."</div>
+                <div class="trainer-achievements">
+                    <div class="achievement">🎯 CrossFit Level 1 Certified</div>
+                    <div class="achievement">🔥 HIIT Specialist Certification</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Training Philosophy Section -->
     <section class="training-philosophy">
         <div class="container">
-            <h2 class="section-title">Our Training Philosophy</h2>
+            <h2 class="section-title" data-aos="zoom-in">Our Women's Training Philosophy</h2>
             <div class="philosophy-grid">
-                <div class="philosophy-card">
+                <div class="philosophy-card" data-aos="zoom-in">
                     <div class="philosophy-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Personalized Approach</h3>
-                    <p>Every member gets individual attention with customized workout plans tailored to their specific
-                        goals, fitness level, and lifestyle.</p>
+                    <h3>Tailored for Every Woman</h3>
+                    <p>We design personalized workout plans that respect each woman’s unique body, lifestyle, and goals
+                        —
+                        whether it’s fat loss, strength, or wellness.</p>
                 </div>
-                <div class="philosophy-card">
+                <div class="philosophy-card" data-aos="zoom-in">
                     <div class="philosophy-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Safety First</h3>
-                    <p>Our certified trainers prioritize proper form and technique to ensure safe, effective workouts
-                        that prevent injuries and maximize results.</p>
+                    <h3>Safe & Supportive Space</h3>
+                    <p>Our women-only training environment promotes safety, comfort, and confidence, guided by certified
+                        female professionals.</p>
                 </div>
-                <div class="philosophy-card">
+                <div class="philosophy-card" data-aos="zoom-in">
                     <div class="philosophy-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Supportive Community</h3>
-                    <p>We create an encouraging environment where everyone feels welcome, supported, and motivated to
-                        achieve their fitness goals together.</p>
+                    <h3>Empowering Sisterhood</h3>
+                    <p>We build a strong, motivating community where women uplift each other through shared support,
+                        accountability, and success.</p>
                 </div>
-                <div class="philosophy-card">
+                <div class="philosophy-card" data-aos="zoom-in">
                     <div class="philosophy-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <h3>Results-Driven</h3>
-                    <p>Our proven methods and expert guidance ensure you see real, measurable progress towards your
-                        fitness and health objectives.</p>
+                    <h3>Results with Confidence</h3>
+                    <p>Our programs help women achieve visible progress while enhancing self-confidence, strength, and
+                        overall well-being.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Why Choose Our Trainers Section -->
+    <!-- Why Choose Our Female Trainers Section -->
     <section class="why-choose-trainers">
         <div class="container">
-            <h2 class="section-title">Why Choose MYCROSSFIT Trainers?</h2>
+            <h2 class="section-title" data-aos="zoom-in">Why Choose Our Female Trainers?</h2>
             <div class="reasons-grid">
-                <div class="reason-card">
+                <div class="reason-card" data-aos="zoom-in">
+                    <div class="reason-icon"><i class="fas fa-user-check"></i></div>
                     <div class="reason-number">01</div>
-                    <h3>Certified Professionals</h3>
-                    <p>All our trainers hold internationally recognized certifications and undergo continuous education
-                        to stay updated with the latest fitness techniques.</p>
+                    <h3>Certified & Experienced Women</h3>
+                    <p>All our female trainers are internationally certified and highly skilled in women’s health,
+                        fitness, and wellness coaching.</p>
                 </div>
-                <div class="reason-card">
+                <div class="reason-card" data-aos="zoom-in">
+                    <div class="reason-icon"><i class="fas fa-heartbeat"></i></div>
                     <div class="reason-number">02</div>
-                    <h3>Local Understanding</h3>
-                    <p>Our trainers understand the unique needs and cultural preferences of Daska residents, creating
-                        comfortable and effective training environments.</p>
+                    <h3>Understanding Women’s Needs</h3>
+                    <p>From hormonal changes to lifestyle challenges, our trainers understand what women need at every
+                        stage and customize training accordingly.</p>
                 </div>
-                <div class="reason-card">
+                <div class="reason-card" data-aos="zoom-in">
+                    <div class="reason-icon"><i class="fas fa-clock"></i></div>
                     <div class="reason-number">03</div>
-                    <h3>Flexible Scheduling</h3>
-                    <p>With separate timings for men and women, our trainers accommodate diverse schedules and provide
-                        personalized attention during each session.</p>
+                    <h3>Women-Only Timings</h3>
+                    <p>We offer dedicated female-only training slots in a safe, private environment where women feel
+                        respected, empowered, and supported.</p>
                 </div>
-                <div class="reason-card">
+                <div class="reason-card" data-aos="zoom-in">
+                    <div class="reason-icon"><i class="fas fa-star"></i></div>
                     <div class="reason-number">04</div>
-                    <h3>Proven Track Record</h3>
-                    <p>Our trainers have successfully helped hundreds of clients achieve their fitness goals, from
-                        weight loss to strength building and athletic performance.</p>
+                    <h3>Real Transformations</h3>
+                    <p>Our trainers have helped hundreds of women transform their bodies and confidence — from weight
+                        loss to strength, tone, and overall wellness.</p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/923216436348" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1390,17 +1470,17 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul style="list-style: none;">
-                        <li><a href="#home" style="color: #ccc; text-decoration: none;">Home</a></li>
+                        <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
                         <li><a href="clients.html" style="color: #ccc; text-decoration: none;">Success Stories</a></li>
                         <li><a href="index.html#timings" style="color: #ccc; text-decoration: none;">Timings</a></li>
-                        <li><a href="#about" style="color: #ccc; text-decoration: none;">About</a></li>
+                        <li><a href="index.html#about" style="color: #ccc; text-decoration: none;">About</a></li>
                         <li><a href="saloon.html" style="color: #ccc; text-decoration: none;">Blush Me</a></li>
                         <li><a href="trainer.html" style="color: #ccc; text-decoration: none;">Our Trainers</a></li>
                         <li><a href="member.html" style="color: #ccc; text-decoration: none;">Membership</a></li>
                         <li><a href="hijama.html" style="color: #ccc; text-decoration: none;">Hijama</a></li>
-                        <li><a href="nutrition.html" style="color: #ccc; text-decoration: none;">Nutrition Plans</a>
+                        <li><a href="studio.html" style="color: #ccc; text-decoration: none;">MyCrossFit Studio</a>
                         </li>
-                        <li><a href="#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
+                        <li><a href="index.html#contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section"">
@@ -1413,9 +1493,12 @@
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                       <a href="https://www.facebook.com/share/1AzHYAE8ii/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/mycrossfitladiesgym?igsh=NWU1aHRybDUyeHd3" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/@mycrossfit1829?si=aLhWYhXIdtgfWqie" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/share/1AzHYAE8ii/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mycrossfitladiesgym?igsh=NWU1aHRybDUyeHd3" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@mycrossfit1829?si=aLhWYhXIdtgfWqie" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -1424,6 +1507,37 @@
             </div>
         </div>
     </footer>
+              <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+    <script>
+
+        // Show button on scroll
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top smoothly
+        backToTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+</script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script>
         // Mobile menu toggle
